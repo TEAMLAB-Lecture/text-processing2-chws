@@ -28,8 +28,15 @@ def digits_to_words(input_string):
             >>> tp2.digits_to_words(digits_str2)
             'three one four one five'
     """
-    digit_string = None
-    return digit_string
+    numbers = {'1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five', '6': 'six', '7': 'seven', '8': 'eight',
+               '9': 'nine', '0': 'zero'}
+    digit_string = ''
+
+    for char in input_string:
+        if char in numbers:
+            digit_string += numbers[char] + ' '
+
+    return digit_string.rstrip()
 
 
 """
